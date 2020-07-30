@@ -14,7 +14,7 @@ public class MyDemoLoggingAspect {
 	
 	//@Before("execution(public void add*())")
 	//@Before("execution(public void updateAccount())")
-	@Before("execution(* add*(com.udemy.aopdemo.Account,..))") // match on any number of arguments
+	@Before("execution(* add*(..))") // match on ANY parameters
 	public void beforeAddAccountAdvice()
 	{
 		System.out.println("\n===> Executiong @Before advice on method ");
