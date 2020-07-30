@@ -24,10 +24,11 @@ public class MainDemoApp {
 		// call the business method
 		Account myAccount = new Account();
 		theAccountDAO.addAccount(myAccount, true); // will only match on addAccount for this param type
+		theAccountDAO.doWork();
 		
 		// call the membership method
 		theMembershipDAO.addAnyMethod(); // will not match, as its no param
-		
+		theMembershipDAO.goToSleep();
 		// close the context
 		context.close();
 	}

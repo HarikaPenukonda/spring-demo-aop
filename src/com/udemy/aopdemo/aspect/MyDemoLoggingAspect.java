@@ -14,10 +14,13 @@ public class MyDemoLoggingAspect {
 	
 	//@Before("execution(public void add*())")
 	//@Before("execution(public void updateAccount())")
-	@Before("execution(* add*(..))") // match on ANY parameters
+	//@Before("execution(* add*(..))") // match on ANY parameters
+	@Before("execution(* com.udemy.aopdemo.dao.*.*(..))")
 	public void beforeAddAccountAdvice()
 	{
 		System.out.println("\n===> Executiong @Before advice on method ");
 	}
+	
+	
 
 }
