@@ -22,10 +22,11 @@ public class MainDemoApp {
 				context.getBean("membershipDAO",MembershipDAO.class);
 		
 		// call the business method
-		theAccountDAO.addAccount();
+		Account myAccount = new Account();
+		theAccountDAO.addAccount(myAccount); // will only match on addAccount for this param type
 		
 		// call the membership method
-		theMembershipDAO.addAnyMethod();
+		theMembershipDAO.addAnyMethod(); // will not match, as its no param
 		
 		// close the context
 		context.close();
